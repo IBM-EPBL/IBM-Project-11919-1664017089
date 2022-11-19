@@ -1,0 +1,360 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rainfall Prediction</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="../static/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p><i class="fa fa-envelope mr-2"></i>rainfall@info.com</p>
+                        <p class="text-body px-3">|</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-primary pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="m-0 text-primary"><span class="text-dark">Rainfall</span> Prediction</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="/test_data" class="nav-item nav-link active">Home</a>
+                        <a href="/logout" class="nav-item nav-link">Logout</a>
+                        
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-4 text-white text-uppercase"></h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Rainfall</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Booking Start -->
+    <div class="container-fluid booking mt-5 pb-5">
+        <div class="container pb-5">
+            <div class="bg-light shadow" style="padding: 30px;">
+                <div class="row align-items-center" style="min-height: 60px;">
+                    <div class="col-md-10">
+					<h3 align="center">User: {{name}} - Testing</h3>
+					<form name="form1" method="post" action="">
+						<div class="row">
+							<div class="col-md-6">
+							The minimum temperature (-8.2 to 31.8) [degree celsius]
+							</div>
+							<div class="col-md-4">
+                               <input type="text" name="min_temp" class="form-control" placeholder="" value="{{min_temp}}" required>
+                            </div>
+							
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+							The maximum temperature (-4.8 to 47) [degree celsius]
+							</div>
+							<div class="col-md-4">
+                               <input type="text" name="max_temp" class="form-control" placeholder="" value="{{max_temp}}" required>
+                            </div>
+							
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+							Rainfall (0 to 278 )[Millimeters]
+							</div>
+							<div class="col-md-4">
+                               <input type="text" name="rain" class="form-control" placeholder="" value="{{rain}}" required>
+                            </div>
+							
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+							The direction of the strongest gust during a particular day.
+							</div>
+							<div class="col-md-4">
+                               <select name="gust_dir" class="form-control">
+							   <option>S</option>
+							   <option>ENE</option>
+							   <option>ESE</option>
+							   <option>N</option>
+							   <option>NA</option>
+							   <option>NE</option>
+							   <option>NNE</option>
+							   <option>NNW</option>
+							   <option>NW</option>
+							   <option>S</option>
+							   <option>SE</option>
+							   <option>SSE</option>
+							   <option>SSW</option>
+							   <option>SW</option>
+							   <option>W</option>
+							   <option>WNW</option>
+							   <option>WSW</option>
+							   </select>
+                            </div>
+							
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+							Speed of strongest gust during a particular day. (7 to 122)[kilometers per hour]
+							</div>
+							<div class="col-md-4">
+                               <input type="text" name="gust_speed" class="form-control" placeholder="" value="{{gust_speed}}" required>
+                            </div>
+							
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+							The humidity of the wind at 9 am. (%)
+							</div>
+							<div class="col-md-4">
+                               <input type="text" name="hum1" class="form-control" placeholder="" value="{{hum1}}" required>
+                            </div>
+							
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+							The humidity of the wind at 3 pm. (%)
+							</div>
+							<div class="col-md-4">
+                               <input type="text" name="hum2" class="form-control" placeholder="" value="{{hum2}}" required>
+                            </div>
+							
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+							Atmospheric pressure at 9 am. (977 to 1039)
+							</div>
+							<div class="col-md-4">
+                               <input type="text" name="pres1" class="form-control" placeholder="" value="{{pres1}}" required>
+                            </div>
+							
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+							Atmospheric pressure at 3 pm. (982 to 1039)
+							</div>
+							<div class="col-md-4">
+                               <input type="text" name="pres2" class="form-control" placeholder="" value="{{pres2}}" required>
+                            </div>
+							
+						</div>
+						<br>
+						
+						<div class="row">
+							<div class="col-md-6">
+							The temperature at 9 am. (-7.2 to 39.4) [degree Celsius]
+							</div>
+							<div class="col-md-4">
+                               <input type="text" name="temp1" class="form-control" placeholder="" value="{{temp1}}" required>
+                            </div>
+							
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-md-6">
+							The temperature at 3 pm. (-5.4 to 45.4) [degree Celsius]
+							</div>
+							<div class="col-md-4">
+                               <input type="text" name="temp2" class="form-control" placeholder="" value="{{temp2}}" required>
+                            </div>
+							
+						</div>
+						<br>
+                        <div class="row">
+						
+                            <div class="col-md-6">
+                              
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Test</button>
+                            </div>
+                            
+						
+                        </div>
+					</form>
+					{% if act=="1" %}
+					<h4 align="center">Rainfall Prediction</h4>
+						{% if res=="Yes" %}
+					<h5 align="center" style="color:#009900">Rain: Yes</h5>
+						{% else %}
+					<h5 align="center" style="color:#FF6600">Rain: No</h5>
+						{% endif %}
+					{% endif %}
+					
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Booking End -->
+
+
+    <!-- About Start -->
+    
+    <!-- About End -->
+
+
+    <!-- Feature Start -->
+   
+    <!-- Feature End -->
+
+
+    <!-- Registration Start -->
+    
+    <!-- Registration End -->
+
+
+    <!-- Team Start -->
+   
+    <!-- Team End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+                    <h1 class="text-primary"><span class="text-white">Rainfall</span></h1>
+                </a>
+                <p>Rainfall is a measurement of how much water falls as rain in a certain period of time. Rainfall is measured by collecting rain water across different areas and times.</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Our Services</h5>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Tamilnadu</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope mr-2"></i>rainfall@info.com</p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white-50">Rainfall Prediction <a href="#"></a></a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white-50"> <a href="https://htmlcodex.com"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/lib/easing/easing.min.js"></script>
+    <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="../static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="../static/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
